@@ -1,3 +1,6 @@
 <!-- Importa o Component nova-transferencia.html para a página principal do app.component.html -->
-<app-nova-transferencia></app-nova-transferencia>
+<app-nova-transferencia (aoTransferir)="transferir($event)"></app-nova-transferencia>
 
+<!-- Exibe o TEMPLATE com o valor das variáveis INTERPOLADAS -->
+<p>Valor: {{transferencia?.valor}}</p>
+<p>Destino: {{transferencia?.destino}}</p>
