@@ -1,4 +1,3 @@
-import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
@@ -13,7 +12,7 @@ export class NovaTransferenciaComponent {
     @Output() aoTransferir = new EventEmitter<any>();
 
     valor: number;
-    destino: string;
+    destino: number;
 
     // MÉTODO_TRANSFERIR: invocado pelo BOTÃO_SUBMIT do FORM_TRANSFERÊNCIA
     transferir() {
@@ -28,6 +27,6 @@ export class NovaTransferenciaComponent {
     }
     limparCampos() {
         this.valor = 0;
-        this.destino = '';
+        this.destino = 0;
     }
 }
