@@ -12,6 +12,10 @@
       ng serve
 
 *** RODAR O PROJETO ***
-      ng serve --open
+      ng serve --open   ||    ng s -o
 
-<!-- Migrando o repositório -->
+<!-- CRIANDO COMPONENTE_EXTRATO PELO TERMINAL: 
+
+      1. Pare o terminal Ctrl + C
+      2. Rodar comando: ng generate component extrato
+-->

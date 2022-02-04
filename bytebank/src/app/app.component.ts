@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'bytebank';
-    transferencia: any;
+    transferencias: any[] = [];
 
     transferir($event) {
         console.log($event);
-        this.transferencia = $event;
+        /* ... -> STRAP_OPERATOR: "desmonta" o OBJETO_TRANSFERENCIA para utilizar   apenas suas PROPRIEDADES_VALOR_DESTIONO separadamente */
+        const transferencia = {...$event, data: new Date()};
+        this.transferencias.push(transferencia);
     }
 }

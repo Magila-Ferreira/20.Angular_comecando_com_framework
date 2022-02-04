@@ -2,6 +2,8 @@
 <!-- (aoTransferir) -> EVENT BUILDINGS: recebe o valor para um método local -->
 <app-nova-transferencia (aoTransferir)="transferir($event)"></app-nova-transferencia>
 
-<!-- Exibe o TEMPLATE com o valor das variáveis INTERPOLADAS -->
-<p>Valor: {{transferencia?.valor}}</p>
-<p>Destino: {{transferencia?.destino}}</p>
+<!-- NOVO COMPONENT_EXTRATO: criado pelo terminal -->
+<!-- ATRIBUTO_TRANSFERENCIA: recebe o valor da variável     declarada
+-->
+<app-extrato [transferencias]="transferencias"></app-extrato>
+
