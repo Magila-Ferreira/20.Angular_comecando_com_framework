@@ -13,3 +13,5 @@
 
 *** RODAR O PROJETO ***
       ng serve --open
+
+<!-- Migrando o repositório -->
