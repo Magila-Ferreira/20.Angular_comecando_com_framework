@@ -19,3 +19,9 @@
       1. Pare o terminal Ctrl + C
       2. Rodar comando: ng generate component extrato
 -->
+
+<!-- LEVANTAR SERVIDOR DE DADOS: 
+
+      1. Abra o terminal CMD dentro da pasta dados
+      2. Rodar comando: json-server --watch db.json
+-->
