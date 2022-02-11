@@ -1,7 +1,11 @@
-<!-- Importa o Component nova-transferencia.html para a página principal do app.component.html -->
-<!-- (aoTransferir) -> EVENT BUILDINGS: recebe o valor para um método local -->
-<app-nova-transferencia></app-nova-transferencia>
+<header>
+    <a routerLink="extrato">Bytebank</a>
+    <a routerLink="nova-transferencia" routerLinkActive="ativo">Nova transferência</a>
+</header>
 
-<!-- NOVO COMPONENT_EXTRATO: criado pelo terminal -->
-<app-extrato></app-extrato>
+<main>
+    <!-- Importa as rotas para o redirecionamento das páginas pelo AppRoutes -->
+    <router-outlet></router-outlet>
+</main>
+
 

@@ -1,22 +1,26 @@
 <!-- Exibe o TEMPLATE com o valor das variáveis INTERPOLADAS -->
-<table class="tabela">
-    <thead class="tabela__cabecalho">
-        <th class="tabela__cabecalho__conteudo">Data</th>
-        <th class="tabela__cabecalho__conteudo">Valor</th>
-        <th class="tabela__cabecalho__conteudo">Destino</th>
-    </thead>
-    <!-- DIRETIVA_ngIF -> Funciona como um IF_JS, verificando as condicionalidades para iterar os elementos do ARRAY na tela -->
-    <tbody *ngIf="transferencias?.length > 0; else listaVazia">
-        <!-- DIRETIVA_ngFOR -> Funciona como um FOR_JS, iterando os elementos do ARRAY na tela -->
-        <tr class="tabela__linha" *ngFor="let transferencia of transferencias">
-            <!-- DATE: "short" -> fomato de data (dd/mm/aaaa hh:mm) -->
-            <td class="tabela__conteudo">{{ transferencia.data | date: "short" }}</td>
-            <!-- CURRENCY -> fomato de valor (0,00) -->
-            <td class="tabela__conteudo">{{ transferencia.valor | currency }}</td>
-            <td class="tabela__conteudo">{{ transferencia.destino }}</td>
-        </tr>
-    </tbody>
-</table>
-<ng-template #listaVazia>
-    <p class="lista-vazia">Nenhuma operação cadastrada</p>
-</ng-template>
+<section class="container">
+    <h2 class="titulo">Transferências</h2>
+    <table class="tabela">
+        <thead class="tabela__cabecalho">
+            <th class="tabela__cabecalho__conteudo">Data</th>
+            <th class="tabela__cabecalho__conteudo">Valor</th>
+            <th class="tabela__cabecalho__conteudo">Destino</th>
+        </thead>
+        <!-- DIRETIVA_ngIF -> Funciona como um IF_JS, verificando as condicionalidades para iterar os elementos do ARRAY na tela -->
+        <tbody *ngIf="transferencias?.length > 0; else listaVazia">
+            <!-- DIRETIVA_ngFOR -> Funciona como um FOR_JS, iterando os elementos do ARRAY na tela -->
+            <tr class="tabela__linha" *ngFor="let transferencia of transferencias">
+                <!-- DATE: "short" -> fomato de data (dd/mm/aaaa hh:mm) -->
+                <td class="tabela__conteudo">{{ transferencia.data | date: "short" }}</td>
+                <!-- CURRENCY -> fomato de valor (0,00) -->
+                <td class="tabela__conteudo">{{ transferencia.valor | currency }}</td>
+                <td class="tabela__conteudo">{{ transferencia.destino }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-template #listaVazia>
+        <p class="lista-vazia">Nenhuma operação cadastrada</p>
+    </ng-template>
+</section>
